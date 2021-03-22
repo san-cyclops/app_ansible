@@ -1,0 +1,7 @@
+---
+- name: simple role example
+  hosts: prod
+  become: true
+  remote_user: automation
+  roles:
+    - my_role

@@ -1,0 +1,35 @@
+---
+# tasks file for my_role
+
+- name: install software
+  yum:
+    name:
+      - elinks
+      - firewalld
+      - httpd
+    state: latest
+
+- name: copy index.html
+  template:
+    src: ./templates/index.html.j2 
+    dest: /var/www/html/index.html
+
+- name: start servcie apache
+  service:
+    name: httpd
+    state: started
+    enabled: true
+
+- name: start service firewalld
+  service:
+    name: firewalld
+    state: started
+    enabled: true
+
+- name: open http port
+  firewalld:
+   service: http
+   permanent: true
+   immediate: true
+   state: enabled 
+

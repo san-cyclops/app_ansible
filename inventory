@@ -1,0 +1,13 @@
+[dev]
+control.example.net
+
+
+
+[prod]
+manage1.example.net
+manage2.example.net
+
+[all]
+control.example.net
+manage1.example.net
+manage2.example.net
