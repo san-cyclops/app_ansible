@@ -1,8 +1,6 @@
 [dev]
 control.example.net
 
-
-
 [prod]
 manage1.example.net
 manage2.example.net

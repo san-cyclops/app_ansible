@@ -1,0 +1,11 @@
+---
+- name: install elinks
+  hosts: all
+  become: true
+  remote_user: automation
+  tasks:
+    - name: install software
+      yum:
+        name: elinks
+        state: latest
+
