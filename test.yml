@@ -1,6 +1,6 @@
 ---
 - name: install elinks
-  hosts: all
+  hosts: dev
   become: true
   remote_user: automation
   tasks:
