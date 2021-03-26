@@ -2,7 +2,7 @@
 - name: install elinks
   hosts: dev
   become: true
-  remote_user: automation
+  remote_user: vagrant
   tasks:
     - name: install software
       yum:
