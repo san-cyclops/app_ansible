@@ -19,7 +19,6 @@
          reauthorize: yes
     - name: Pull an image
       shell: docker pull sancyclops/san-docker-demo:san-docker-demo
-
 - name: Deploy K8s
   hosts: k8s
   become: true
