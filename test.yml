@@ -12,13 +12,13 @@
       pip:
          name: docker
     - name: Log into private registry and force re-authorization
-      community.docker.docker_login:
+      docker_login:
          registry: https://index.docker.io/v1/
          username: sancyclops
          password: '1111111111'
          reauthorize: yes
     - name: Pull an image
-      community.docker.docker_image:
+      docker_image:
          name: san-docker-demo
          repository: sancyclops
          source: pull
