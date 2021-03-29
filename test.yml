@@ -8,6 +8,9 @@
       yum:
         name: elinks
         state: latest
+    - name: install docker setuptools
+      pip:
+         name: setuptools
     - name: install docker sdk for python
       pip:
          name: docker
