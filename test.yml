@@ -13,7 +13,9 @@
   hosts: dev
   become: true
   remote_user: vagrant
-  docker_image:
-    name: sancyclops/san-docker-demo
-    tag: latest
-    state: present 
+  tasks:
+     - name: pull an image
+       docker_image:
+          name: sancyclops/san-docker-demo
+          tag: latest
+          state: present 
