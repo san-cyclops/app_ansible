@@ -1,5 +1,5 @@
 ---
-- name: install elinks
+- name: pull docker image
   hosts: dev
   become: true
   remote_user: vagrant
