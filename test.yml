@@ -13,6 +13,7 @@
          name: docker
     - name: Log into private registry and force re-authorization
       docker_login:
+         registry: registry.hub.docker.com
          username: sancyclops
          password: 1111111111
          reauthorize: yes
