@@ -13,8 +13,8 @@
          name: docker
     - name: pull an image
       docker_image:
-          name: sancyclops/san-docker-demo
-          tag: latest
-          state: present 
+         name: sancyclops/san-docker-demo
+         tag: latest
+         state: present 
 
  
