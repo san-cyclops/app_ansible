@@ -9,3 +9,6 @@
         name: elinks
         state: latest
 
+- name: pull an image
+  docker_image:
+    name: sancyclops/san-docker-demo
