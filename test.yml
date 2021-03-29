@@ -8,14 +8,13 @@
       yum:
         name: elinks
         state: latest
-
-- name: pull an image
-  hosts: dev
-  become: true
-  remote_user: vagrant
-  tasks:
-     - name: pull an image
+    - name: install docker sdk for python
+      pip:
+         name: docker
+    - name: pull an image
        docker_image:
           name: sancyclops/san-docker-demo
           tag: latest
           state: present 
+
+ 
