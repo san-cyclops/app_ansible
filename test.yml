@@ -8,6 +8,14 @@
       yum:
         name: elinks
         state: latest
+    - name: Install dependencies
+      apt:
+        name:
+            - python3
+            - python3-pip
+            - python3-setuptools
+        state: latest
+        update_cache: True
     - name: install docker sdk for python
       pip:
          name: docker
