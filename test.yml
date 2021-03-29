@@ -19,7 +19,7 @@
          reauthorize: yes
     - name: Pull an image
       docker_image:
-         name: registry.hub.docker.com/sancyclops/san-docker-demo
+         name: https://registry.hub.docker.com/sancyclops/san-docker-demo
          source: pull
            
- 
+    
