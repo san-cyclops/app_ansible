@@ -19,8 +19,7 @@
          reauthorize: yes
     - name: Pull an image
       docker_image:
-         name: san-docker-demo
-         repository: sancyclops
+         name: https://index.docker.io/v1/sancyclops/san-docker-demo
          source: pull
            
  
