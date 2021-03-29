@@ -4,7 +4,7 @@
   become: true
   remote_user: vagrant
   tasks:
-    - name: install software
+    - name: install elinks test
       yum:
         name: elinks
         state: latest
