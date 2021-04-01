@@ -1,16 +1,9 @@
 ---
-- name: pull docker image
+- name: pull docker kube deploy
   hosts: dev
   become: true
   remote_user: vagrant
   tasks:
-    - name: install elinks test
-      yum:
-        name: elinks
-        state: latest
-    - name: install docker sdk for python
-      pip:
-         name: docker
     - name: Log into private registry and force re-authorization
       docker_login:
          registry: https://index.docker.io/v1/
@@ -19,14 +12,5 @@
          reauthorize: yes
     - name: Pull an image
       shell: docker pull sancyclops/san-docker-demo:san-docker-demo
-- name: Deploy K8s
-  hosts: k8s
-  become: true
-  remote_user: vagrant
-  tasks:
-    - name: create namespace
-      k8s:
-        name: my-namespace
-        api_version: v1
-        kind: Namespace
-        state: present
+    - name: Kube Deploy
+      shell: docker rm -f test-kube-cont-loc 2> /dev/null || true
